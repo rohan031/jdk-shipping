@@ -156,6 +156,15 @@ const items = [
 						);
 					})
 				}
+
+				<li class={styles.nav_logo}>
+					<img
+						src="/logo.svg"
+						alt="jdk shipping"
+						width="200"
+						height="40"
+					/>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -169,8 +178,6 @@ const items = [
 	const navLinks = nav[0].querySelectorAll(".link");
 	const sublinks = nav[0].querySelectorAll(".sublink");
 
-	console.log(currentPath);
-
 	navLinks.forEach((link) => {
 		const linkPath = link.getAttribute("data-path");
 		if (!linkPath) return;
@@ -178,10 +185,6 @@ const items = [
 		if (currentPath === linkPath) {
 			link.classList.add(styles.active);
 		}
-
-		// if (currentPath.includes(linkPath)) {
-		// 	link.classList.add(styles.active);
-		// }
 	});
 
 	sublinks.forEach((link) => {

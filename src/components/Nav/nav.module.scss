@@ -152,6 +152,13 @@
 				clip-path: none;
 				padding: 0;
 			}
+
+			.nav_logo {
+				margin-block-start: auto;
+				@include ab.nav {
+					display: none;
+				}
+			}
 		}
 
 		.link_item {
