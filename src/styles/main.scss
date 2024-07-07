@@ -1,0 +1,36 @@
+@use "./abstracts" as ab;
+@use "./abstracts/reset";
+
+:root {
+	--white: #ffffff;
+	--black: #000000;
+	--red: #b20000;
+	--pink: #e09999;
+
+	--text: var(--black);
+
+	--accent-primary: var(--red);
+	--accent-primary-hover: hsl(0, 100%, 40%);
+	--accent-primary-hover: hsl(0, 100%, 25%);
+
+	--max-width: 70rem;
+	--max-width-wide: 90rem;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+
+	background-color: var(--white);
+	color: var(--text);
+}
+
+.container {
+	width: min(90%, var(--max-width));
+	margin-inline: auto;
+}
+
+.container-wide {
+	width: min(90%, var(--max-width-wide));
+	margin-inline: auto;
+}

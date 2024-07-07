@@ -1,0 +1,195 @@
+---
+import styles from "./nav.module.scss";
+
+const items = [
+	{
+		text: "Home",
+		link: "/",
+	},
+	{
+		text: "Custom Clearance",
+		link: "/services/custom-clearance",
+		sublink: [
+			{
+				text: "Customs Brokerage",
+				link: "/services/custom-clearance/customs-brokerage",
+			},
+			{
+				text: "Project & Odd Dimensional Cargo & Break Bulk Logistics",
+				link: "/services/custom-clearance/project-and-odd-dimensional-cargo-and-break-bulk-logistics",
+			},
+		],
+	},
+	{
+		text: "Freight Forwarding",
+		link: "/services/freight-forwarding",
+		sublink: [
+			{
+				text: "Freight Forwarding",
+				link: "/services/freight-forwarding/freight-forwarding",
+			},
+			{
+				text: "Air & Sea Cargo Consolidation",
+				link: "/services/freight-forwarding/air-and-sea-cargo-consolidation",
+			},
+			{
+				text: "Network Cross Country Movement",
+				link: "/services/freight-forwarding/network-cross-country-movement",
+			},
+			{
+				text: "NFO/AOG Hand Carry Shipment",
+				link: "/services/freight-forwarding/nfo-aog-hand-carry-shipment",
+			},
+		],
+	},
+	{
+		text: "Other Services",
+		link: "/services/others",
+		sublink: [
+			{
+				text: "DG Packaging & Logistics",
+				link: "/services/others/dg-packaging-and-logistics",
+			},
+			{
+				text: "Final Mile Delivery",
+				link: "/services/others/final-mile-delivery",
+			},
+			{
+				text: "International Express Courier Services",
+				link: "/services/others/international-express-courier-services",
+			},
+			{
+				text: "Ships Spares",
+				link: "/services/others/ships-spares",
+			},
+			{
+				text: "Temperature Controlled Packaging & Logistics",
+				link: "/services/others/temperature-controlled-packaging-and-logistics",
+			},
+			{
+				text: "Cold-Chain Warehousing & DG Warehousing",
+				link: "/services/others/cold-chain-warehousing-and-dg-warehousing",
+			},
+		],
+	},
+	{
+		text: "Contact Us",
+		link: "/contact-us",
+	},
+];
+---
+
+<nav class={styles.nav}>
+	<div class={`container ${styles.container}`}>
+		<div class={styles.logo}>
+			<a href="/">
+				<img
+					src="/logo.svg"
+					alt="jdk shipping"
+					width="200"
+					height="40"
+				/>
+			</a>
+		</div>
+
+		<div class={styles.main}>
+			<div class={styles.control}>
+				<input id="nav" type="checkbox" />
+				<label for="nav">
+					<span></span>
+				</label>
+			</div>
+
+			<ul class={styles.links}>
+				{
+					items.map((item) => {
+						const { link, text } = item;
+						const hasSubLink = item.sublink !== undefined;
+
+						if (hasSubLink) {
+							return (
+								<li class={styles.link_item}>
+									<p
+										data-path={link}
+										class={`link ${styles.link}`}
+									>
+										{text}
+									</p>
+
+									<div class={styles.sublinks}>
+										<ul>
+											{item.sublink.map(
+												({ text, link }) => {
+													return (
+														<li
+															class={
+																styles.sublink_item
+															}
+														>
+															<a
+																data-path={link}
+																class={`sublink ${styles.sublink}`}
+																href={link}
+															>
+																{text}
+															</a>
+														</li>
+													);
+												}
+											)}
+										</ul>
+									</div>
+								</li>
+							);
+						}
+
+						return (
+							<li class={styles.link_item}>
+								<a
+									data-path={link}
+									class={`link ${styles.link}`}
+									href={link}
+								>
+									{text}
+								</a>
+							</li>
+						);
+					})
+				}
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	import styles from "./nav.module.scss";
+
+	const nav = document.getElementsByTagName("nav");
+	const currentPath = window.location.pathname;
+	const navLinks = nav[0].querySelectorAll(".link");
+	const sublinks = nav[0].querySelectorAll(".sublink");
+
+	console.log(currentPath);
+
+	navLinks.forEach((link) => {
+		const linkPath = link.getAttribute("data-path");
+		if (!linkPath) return;
+
+		if (currentPath === linkPath) {
+			link.classList.add(styles.active);
+		}
+
+		// if (currentPath.includes(linkPath)) {
+		// 	link.classList.add(styles.active);
+		// }
+	});
+
+	sublinks.forEach((link) => {
+		const linkPath = link.getAttribute("data-path");
+		if (!linkPath) return;
+
+		if (currentPath === linkPath) {
+			link.classList.add(styles.active);
+		}
+	});
+</script>
