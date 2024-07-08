@@ -128,6 +128,13 @@
 				user-select: none;
 
 				color: var(--text);
+				display: flex;
+				align-items: center;
+				gap: 0.25rem;
+
+				svg {
+					color: var(--accent-primary);
+				}
 
 				@include ab.nav {
 					font-size: clamp(1rem, 1vi, 1.25rem);

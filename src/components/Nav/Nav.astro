@@ -1,5 +1,6 @@
 ---
 import styles from "./nav.module.scss";
+import { Icon } from "astro-icon/components";
 
 const items = [
 	{
@@ -114,6 +115,7 @@ const items = [
 										class={`link ${styles.link}`}
 									>
 										{text}
+										<Icon name="fa6-solid:angle-down" />
 									</p>
 
 									<div class={styles.sublinks}>
@@ -173,26 +175,28 @@ const items = [
 <script>
 	import styles from "./nav.module.scss";
 
-	const nav = document.getElementsByTagName("nav");
-	const currentPath = window.location.pathname;
-	const navLinks = nav[0].querySelectorAll(".link");
-	const sublinks = nav[0].querySelectorAll(".sublink");
+	document.addEventListener("astro:page-load", () => {
+		const nav = document.getElementsByTagName("nav");
+		const navLinks = nav[0].querySelectorAll(".link");
+		const sublinks = nav[0].querySelectorAll(".sublink");
 
-	navLinks.forEach((link) => {
-		const linkPath = link.getAttribute("data-path");
-		if (!linkPath) return;
+		const currentPath = window.location.pathname;
+		navLinks.forEach((link) => {
+			const linkPath = link.getAttribute("data-path");
+			if (!linkPath) return;
 
-		if (currentPath === linkPath) {
-			link.classList.add(styles.active);
-		}
-	});
+			if (currentPath === linkPath) {
+				link.classList.add(styles.active);
+			}
+		});
 
-	sublinks.forEach((link) => {
-		const linkPath = link.getAttribute("data-path");
-		if (!linkPath) return;
+		sublinks.forEach((link) => {
+			const linkPath = link.getAttribute("data-path");
+			if (!linkPath) return;
 
-		if (currentPath === linkPath) {
-			link.classList.add(styles.active);
-		}
+			if (currentPath === linkPath) {
+				link.classList.add(styles.active);
+			}
+		});
 	});
 </script>
