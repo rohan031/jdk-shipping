@@ -8,10 +8,62 @@
 	min-height: 22.5rem;
 
 	border-image: fill 0 linear-gradient(var(--_overlay), var(--_overlay));
-	background-image: url("/service.webp");
+	// background-image: url("/service.webp");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+
+	&[data-background="custom-brokerage"] {
+		background-image: url("/services/custom-brokerage.webp");
+		background-position: center 25%;
+	}
+
+	&[data-background="project-and-odd"] {
+		background-image: url("/services/project-and-odd.webp");
+	}
+
+	&[data-background="air-and-sea-cargo"] {
+		background-image: url("/services/air-and-sea.webp");
+	}
+
+	&[data-background="freight-forwarding"] {
+		background-image: url("/services/fright.webp");
+	}
+
+	&[data-background="network-cross-country-movement"] {
+		background-image: url("/services/network.webp");
+	}
+
+	&[data-background="nfo-aog"] {
+		background-image: url("/services/nfo.webp");
+	}
+
+	&[data-background="cold-chain"] {
+		background-image: url("/services/cold-chain.webp");
+	}
+
+	&[data-background="dg-packaging"] {
+		background-image: url("/services/dg-packaging.webp");
+		background-position: center 20%;
+	}
+
+	&[data-background="final-mile-delivery"] {
+		background-image: url("/services/final-mile.webp");
+	}
+
+	&[data-background="international-express-courier"] {
+		background-image: url("/services/international-express.webp");
+	}
+
+	&[data-background="ship-spares"] {
+		background-image: url("/services/ship-spares.webp");
+		background-position: center 60%;
+	}
+
+	&[data-background="temperature-controlled-packaging"] {
+		background-image: url("/services/temperature.webp");
+		background-position: center 35%;
+	}
 
 	color: var(--white);
 
