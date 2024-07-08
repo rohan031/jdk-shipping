@@ -1,5 +1,30 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Network Cross Country Movement";
+const image = "network-cross-country-movement";
+
+const content = [
+	"Our network cross-country movement services ensure seamless transportation of your goods across national borders. Leveraging our extensive logistics network, we offer efficient and reliable solutions for moving your cargo swiftly and safely, no matter the destination.",
+
+	"We understand the complexities involved in cross-country transportation, including regulatory requirements, customs clearance, and coordination with multiple carriers. Our team of logistics experts is well-versed in managing these challenges, ensuring that your shipments move smoothly from point A to point B.",
+
+	"Our network cross-country movement services are designed to provide you with flexible and cost-effective shipping options. Whether you are transporting goods by road, rail, air, or sea, we have the expertise and resources to handle your shipments with precision and care. We work closely with a network of trusted partners to ensure your cargo is delivered on time and in perfect condition.",
+
+	"One of the key advantages of our cross-country movement services is our ability to offer end-to-end solutions. We manage every aspect of your shipment, from planning and coordination to execution and delivery. Our comprehensive approach ensures that all details are taken care of, allowing you to focus on your core business activities.",
+
+	"In addition to standard transportation, we offer specialized services for time-sensitive and high-value shipments. Our priority shipping options ensure that your urgent deliveries reach their destination as quickly as possible. We also provide real-time tracking and monitoring, giving you complete visibility and control over your shipments.",
+
+	"Our commitment to customer satisfaction is at the heart of our operations. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our team is always available to assist you with any questions or concerns, ensuring a smooth and hassle-free shipping experience.",
+
+	"Trust us to handle your network cross-country movement needs with expertise and efficiency. Our seamless transportation solutions are designed to meet the demands of today's global marketplace, providing you with the support and reliability you need to stay ahead of the competition.",
+];
 ---
 
-<Layout title="JDK Shipping - Network Cross Country Movement">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import styles from "./hero.module.scss";
+
+interface Props {
+	title: string;
+	image: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<div class={styles.hero} data-background={image}>
+	<h1 class="container">{title}</h1>
+</div>

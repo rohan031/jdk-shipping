@@ -1,0 +1,17 @@
+---
+import styles from "./content.module.scss";
+
+interface Props {
+	content: string[];
+}
+
+const { content } = Astro.props;
+---
+
+<div class={`container ${styles.content}`} }>
+	{
+		content.map((item) => {
+			return <p>{item}</p>;
+		})
+	}
+</div>

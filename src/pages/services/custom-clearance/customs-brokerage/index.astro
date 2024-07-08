@@ -1,5 +1,22 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Custom Brokerage";
+const image = "custom-brokerage";
+
+const content = [
+	"Navigating the complexities of customs regulations can be daunting, but our expert customs brokerage services are designed to simplify the process for you. We understand the intricate and often confusing world of international trade regulations, tariffs, and documentation. Our team of experienced professionals works diligently to ensure your shipments clear customs swiftly and without hassle.",
+	"We handle all the necessary paperwork, including import and export declarations, compliance checks, and duty payments. Our goal is to mitigate any risks and avoid delays by ensuring that all documentation is accurate and submitted on time. By doing so, we help you avoid costly fines and penalties associated with non-compliance.",
+	"Our customs brokerage services are tailored to meet the unique needs of each client. Whether you are shipping goods across borders for the first time or are a seasoned importer/exporter, we provide personalized solutions to ensure your goods move smoothly through customs. Our deep understanding of customs regulations across various countries allows us to navigate the rules efficiently and effectively.",
+	"In addition to paperwork and compliance, we offer consultancy services to help you understand the best practices for customs clearance. We stay up-to-date with the latest changes in customs regulations, ensuring that you are always informed and compliant. Our proactive approach helps you anticipate and avoid potential issues before they arise.",
+	"Partnering with us means you can focus on your core business activities while we take care of the complexities of customs clearance. Our commitment to excellent service and our extensive knowledge of international trade make us a trusted partner in managing your customs brokerage needs. Let us handle the intricacies of customs clearance so you can concentrate on what you do best – growing your business.",
+];
 ---
 
-<Layout title="JDK Shipping - Custom Brokerage">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

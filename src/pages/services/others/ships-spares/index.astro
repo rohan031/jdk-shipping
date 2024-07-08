@@ -1,5 +1,30 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Ships Spares";
+const image = "ship-spares";
+
+const content = [
+	"Ensure the smooth operation of your vessels with our specialized ships spares logistics services. We understand the critical importance of having the right spare parts available when you need them, and we are dedicated to providing reliable and efficient solutions for the maritime industry.",
+
+	"Our ships spares logistics services are designed to manage the transportation of essential spare parts to ports and shipyards worldwide. Whether you need routine maintenance items or urgent repairs, we have the expertise and resources to ensure timely delivery and minimize downtime for your fleet.",
+
+	"We offer end-to-end logistics solutions for ships spares, including sourcing, transportation, customs clearance, and delivery. Our global network of suppliers and carriers allows us to provide cost-effective and reliable services, ensuring that your spare parts are delivered on time and in perfect condition.",
+
+	"Our team of logistics professionals works closely with you to understand your specific needs and requirements. We develop customized logistics plans that ensure the efficient and secure transportation of your ships spares. From small components to large machinery, we handle all types of spare parts with the highest level of care and attention to detail.",
+
+	"In addition to transportation, we offer value-added services such as inventory management, warehousing, and distribution. Our advanced tracking systems provide real-time updates on the status of your shipments, giving you complete visibility and control over your spare parts logistics.",
+
+	"Customer satisfaction is our top priority. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our commitment to excellence ensures that your ships spares are delivered on time, every time.",
+
+	"Trust us to manage your ships spares logistics with expertise and efficiency. Our reliable services are designed to meet the demands of the maritime industry, providing you with the support and reliability you need to keep your vessels operating smoothly.",
+];
 ---
 
-<Layout title="JDK Shipping - Ships Spares">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

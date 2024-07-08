@@ -34,7 +34,9 @@ const { title } = Astro.props;
 	<body>
 		<div>
 			<Nav />
-			<slot />
+			<main>
+				<slot />
+			</main>
 			<Footer />
 		</div>
 
@@ -49,8 +51,13 @@ const { title } = Astro.props;
 				display: flex;
 				flex-direction: column;
 				min-height: 100vb;
+			}
 
-				gap: 1em;
+			main {
+				display: grid;
+				gap: 3em;
+
+				margin-block-end: 3em;
 			}
 		</style>
 	</body>

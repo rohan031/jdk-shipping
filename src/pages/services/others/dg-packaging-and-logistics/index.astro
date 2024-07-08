@@ -1,5 +1,32 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "DG Packaging & Logistics";
+const image = "dg-packaging";
+
+const content = [
+	"Handling dangerous goods requires expertise and stringent safety measures. Our DG (Dangerous Goods) packaging and logistics services ensure compliance with all regulatory requirements and provide safe, secure, and efficient transportation of hazardous materials.",
+
+	"We understand the unique challenges associated with shipping dangerous goods, including the need for specialized packaging, handling, and documentation. Our team of experienced professionals is trained to manage these challenges, ensuring that your hazardous materials are transported safely and in compliance with all regulations.",
+
+	"Our DG packaging solutions are designed to meet the highest standards of safety and reliability. We use specialized packaging materials and techniques to ensure that your dangerous goods are properly contained and protected throughout the shipping process. Our packaging solutions are compliant with all relevant regulations, including IATA, IMDG, and ADR.",
+
+	"In addition to packaging, we offer comprehensive logistics services for dangerous goods. Our transportation options include road, rail, sea, and air, ensuring that your hazardous materials are delivered to their destination safely and efficiently. Our advanced tracking systems provide real-time updates on the status of your shipments, giving you complete visibility and control.",
+
+	"We handle all the necessary documentation and compliance checks, ensuring that your shipments meet all regulatory requirements. Our team stays up-to-date with the latest changes in dangerous goods regulations, providing you with expert guidance and support to ensure compliance.",
+
+	"Safety is our top priority. We implement rigorous safety protocols and procedures to protect your shipments and the environment. Our commitment to excellence and reliability ensures that your dangerous goods are handled with the highest level of care and precision.",
+
+	"Customer satisfaction is at the heart of our operations. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our expertise in DG packaging and logistics ensures that your hazardous materials are transported safely and efficiently.",
+
+	"Trust us to manage your dangerous goods logistics with expertise and care. Our comprehensive solutions are designed to meet the unique challenges of shipping hazardous materials, providing you with the support and reliability you need to ensure safe and compliant transportation.",
+];
 ---
 
-<Layout title="JDK Shipping - DG Packaging & Logistics">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

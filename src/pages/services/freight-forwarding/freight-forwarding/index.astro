@@ -1,5 +1,28 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Freight Frowarding";
+const image = "frieght-forwarding";
+
+const content = [
+	"Our freight forwarding services are designed to provide you with reliable and efficient transportation of your goods, ensuring that your supply chain runs smoothly from start to finish. With years of experience in the logistics industry, we understand the importance of timely and cost-effective shipping solutions. Whether by land, sea, or air, we coordinate every aspect of your shipment to meet your specific needs.",
+
+	"Our team of dedicated professionals works closely with you to develop customized freight forwarding plans that align with your business objectives. We handle everything from documentation and customs clearance to warehousing and distribution, ensuring a seamless shipping process. Our global network of partners and carriers allows us to offer competitive rates and flexible shipping options.",
+
+	"We understand that every shipment is unique, which is why we offer a range of services to accommodate different types of cargo. Whether you are shipping small parcels or large, oversized items, we have the expertise and resources to manage your freight effectively. Our advanced tracking systems provide real-time updates on the status of your shipment, giving you peace of mind and allowing you to plan accordingly.",
+
+	"In addition to standard freight forwarding, we offer specialized services such as project cargo handling, temperature-controlled shipping, and dangerous goods transportation. Our comprehensive approach ensures that all aspects of your shipment are managed with the highest level of care and attention to detail.",
+
+	"Customer satisfaction is at the heart of our operations. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our commitment to excellence ensures that your goods are delivered on time and in perfect condition.",
+
+	"Trust us to manage your supply chain with precision and care. Our seamless freight forwarding solutions are designed to meet the demands of today's global marketplace, providing you with the support and expertise you need to stay ahead of the competition.",
+];
 ---
 
-<Layout title="JDK Shipping - Freight Forwarding">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

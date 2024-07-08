@@ -1,5 +1,28 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "NFO/AOG Hand Carry Shipment";
+const image = "nfo-aog";
+
+const content = [
+	"For time-critical and high-value shipments, our NFO (Next Flight Out) and AOG (Aircraft on Ground) hand carry services provide the fastest possible delivery. We understand that certain shipments require immediate attention and cannot afford any delays. That’s why our dedicated couriers personally accompany your shipment, ensuring it reaches its destination as quickly and securely as possible.",
+
+	"Our NFO hand carry services are ideal for urgent deliveries that need to be on the next available flight. We prioritize your shipment and work closely with airlines to secure the fastest transit times. Our couriers accompany your package from pick-up to delivery, providing real-time updates and ensuring it is handled with the utmost care.",
+
+	"For the aviation industry, our AOG hand carry services are essential for the timely delivery of critical aircraft parts and components. When an aircraft is grounded due to technical issues, every minute counts. Our AOG services ensure that the necessary parts are delivered promptly, minimizing downtime and getting the aircraft back in the air as quickly as possible.",
+
+	"We handle all the logistics and coordination involved in hand carry shipments, including documentation, customs clearance, and security procedures. Our experienced couriers are trained to navigate the complexities of international travel, ensuring your shipment moves smoothly through airports and customs checkpoints.",
+
+	"In addition to speed and reliability, we prioritize the security of your shipments. Our couriers are equipped with secure packaging and handling procedures to protect your items throughout the journey. With our advanced tracking systems, you can monitor the status of your shipment in real-time, giving you peace of mind and the ability to plan accordingly.",
+
+	"Our NFO/AOG hand carry services are tailored to meet your specific needs. We work closely with you to understand your requirements and develop customized solutions that ensure timely and secure delivery. With our expertise and commitment to excellence, you can trust us to handle your time-critical shipments with the highest level of care and professionalism.",
+];
 ---
 
-<Layout title="JDK Shipping - NFO/AOG Hand Carry Shipment">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

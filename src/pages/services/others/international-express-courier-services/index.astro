@@ -1,7 +1,28 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "International Express Courier Services";
+const image = "international-express-courier";
+
+const content = [
+	"When time is of the essence, our international express courier services deliver. We understand that in today's fast-paced world, timely delivery of documents and packages is crucial for business success. That's why we provide fast, reliable, and secure delivery of items across the globe.",
+
+	"Our international express courier services are designed to meet the highest standards of speed and reliability. We offer a range of delivery options to suit your needs, whether you require same-day, next-day, or time-definite delivery. Our extensive global network ensures that your shipments reach their destination on time, every time.",
+
+	"We handle a wide variety of items, from important documents and small parcels to larger packages and freight. Our dedicated team of couriers is trained to handle your shipments with care, ensuring they arrive safely and in perfect condition. With our advanced tracking systems, you can monitor the status of your shipment in real-time, giving you peace of mind and the ability to plan accordingly.",
+
+	"In addition to speed and reliability, we prioritize the security of your shipments. Our robust security measures ensure that your items are protected throughout the shipping process. From secure packaging and handling to rigorous security checks, we take every precaution to safeguard your shipments.",
+
+	"Our customer service team is always available to assist you with any questions or concerns. We provide personalized support and solutions to ensure your shipping experience is smooth and hassle-free. Whether you need assistance with documentation, customs clearance, or tracking, our team is here to help.",
+
+	"Partner with us for your international express courier needs and experience the difference of working with a trusted logistics provider. Our commitment to excellence and customer satisfaction ensures that your shipments are delivered on time and with the highest level of care.",
+];
 ---
 
-<Layout title="JDK Shipping - International Express Courier Services"
-	>rohan</Layout
->
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

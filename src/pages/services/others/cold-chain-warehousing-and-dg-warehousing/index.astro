@@ -1,7 +1,26 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Cold-Chain Warehousing & DG Warehousing";
+const image = "cold-chain";
+
+const content = [
+	"Our state-of-the-art cold-chain warehousing ensures your temperature-sensitive goods are stored under optimal conditions. Additionally, our DG (Dangerous Goods) warehousing solutions provide secure storage for hazardous materials. We prioritize safety, compliance, and the preservation of your products' quality.",
+
+	"Our cold-chain warehousing services are designed to maintain the required temperature range for your perishable and sensitive items. We use advanced refrigeration and monitoring systems to ensure that your goods are stored at the optimal temperature, preserving their quality and safety. Our warehouses are equipped with specialized storage areas for different types of temperature-sensitive products, including pharmaceuticals, perishable foods, and chemicals.",
+
+	"In addition to temperature-controlled storage, we offer a range of value-added services to meet your specific needs. These include inventory management, order fulfillment, and distribution. Our advanced tracking systems provide real-time updates on the status of your inventory, giving you complete visibility and control over your cold-chain logistics.",
+
+	"Customer satisfaction is at the heart of our operations. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our commitment to excellence ensures that your cold-chain warehousing needs are met with the highest level of care and professionalism.",
+
+	"Trust us to manage your cold-chain warehousing needs with expertise and precision. Our advanced solutions are designed to protect your temperature-sensitive materials, ensuring their safe and efficient storage.",
+];
 ---
 
-<Layout title="JDK Shipping - Cold-Chain Warehousing & DG Warehousing"
-	>rohan</Layout
->
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

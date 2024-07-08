@@ -1,7 +1,30 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Temperature Controlled Packaging & Logistics";
+const image = "temperature-controlled-packaging";
+
+const content = [
+	"Maintain the integrity of your temperature-sensitive goods with our advanced temperature-controlled packaging and logistics services. We understand the unique challenges of transporting perishable and sensitive items, and we are committed to providing solutions that ensure your goods are kept at optimal conditions throughout the shipping process.",
+
+	"Our temperature-controlled packaging solutions are designed to maintain the required temperature range for your products, whether they are pharmaceuticals, perishable foods, or other sensitive items. We use state-of-the-art packaging materials and technologies to provide the highest level of protection for your goods.",
+
+	"In addition to packaging, our logistics services are tailored to meet the specific needs of temperature-sensitive shipments. We offer a range of transportation options, including refrigerated trucks, temperature-controlled containers, and air freight solutions. Our team of logistics experts ensures that your goods are transported under the right conditions, maintaining their quality and safety.",
+
+	"We handle all aspects of temperature-controlled logistics, from planning and coordination to execution and monitoring. Our advanced tracking systems provide real-time updates on the status of your shipments, allowing you to monitor the temperature and location of your goods throughout the journey.",
+
+	"Our commitment to quality and compliance is at the heart of our operations. We adhere to the highest industry standards and regulatory requirements, ensuring that your temperature-sensitive goods are handled with care and precision. Our team of professionals is trained to manage the unique challenges of temperature-controlled logistics, providing you with peace of mind and the assurance that your products will arrive in perfect condition.",
+
+	"Customer satisfaction is our top priority. We work closely with you to understand your specific needs and develop customized solutions that meet your temperature-controlled logistics requirements. Our dedication to excellence and reliability ensures that your goods are delivered on time and with the highest level of care.",
+
+	"Trust us to manage your temperature-controlled packaging and logistics needs with expertise and precision. Our comprehensive solutions are designed to protect your temperature-sensitive goods and ensure their safe and efficient delivery.",
+];
 ---
 
-<Layout title="JDK Shipping - Temperature Controlled Packaging & Logistics">
-	rohan
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
 </Layout>

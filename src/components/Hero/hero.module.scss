@@ -1,0 +1,23 @@
+@use "/src/styles/abstracts" as ab;
+
+.hero {
+	--_overlay: hsl(0 0% 0% / 0.5);
+
+	display: grid;
+	place-items: center;
+	min-height: 22.5rem;
+
+	border-image: fill 0 linear-gradient(var(--_overlay), var(--_overlay));
+	background-image: url("/service.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	color: var(--white);
+
+	h1 {
+		font-size: clamp(2.25rem, 4.5vi, 4rem);
+		text-align: center;
+		text-wrap: balance;
+	}
+}

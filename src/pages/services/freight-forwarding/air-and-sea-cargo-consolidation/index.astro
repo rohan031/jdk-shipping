@@ -1,5 +1,28 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Air & Sea Cargo Consolidation";
+const image = "air-and-sea-cargo";
+
+const content = [
+	"Maximize efficiency and minimize costs with our air and sea cargo consolidation services. We understand that managing multiple small shipments can be costly and time-consuming. By combining multiple shipments into a single consignment, we help reduce freight charges and streamline the shipping process.",
+
+	"Our cargo consolidation services are designed to optimize your logistics operations. By leveraging our extensive network and expertise, we ensure that your cargo is handled with the utmost care and delivered promptly. Whether you are shipping by air or sea, our consolidation services help you save on shipping costs while maintaining high levels of service and reliability.",
+
+	"Air cargo consolidation allows us to combine smaller shipments into a larger, single shipment, reducing the cost per unit and improving efficiency. This method is particularly beneficial for businesses with frequent small shipments, as it allows them to take advantage of lower freight rates and faster transit times. Our team handles all the necessary paperwork, customs clearance, and coordination, ensuring a smooth and efficient process.",
+
+	"Sea cargo consolidation works similarly, but on a larger scale. We consolidate multiple less-than-container-load (LCL) shipments into full-container-load (FCL) shipments. This approach reduces shipping costs and provides better control over your cargo. Our extensive network of sea carriers ensures that your consolidated shipments are delivered safely and on time.",
+
+	"In addition to cost savings, cargo consolidation offers several other benefits. It helps reduce the environmental impact of shipping by maximizing container space and minimizing the number of shipments. This approach also simplifies the logistics process, making it easier to manage and track your cargo.",
+
+	"Our air and sea cargo consolidation services are tailored to meet your specific needs. We work closely with you to understand your shipping requirements and develop customized solutions that optimize your logistics operations. With our expertise and commitment to excellence, you can trust us to handle your cargo with care and deliver it efficiently.",
+];
 ---
 
-<Layout title="JDK Shipping - Air & Sea Cargo Consolidation">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

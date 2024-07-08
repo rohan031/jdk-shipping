@@ -1,5 +1,28 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Final Mile Delivery";
+const image = "final-mile-delivery";
+
+const content = [
+	"The final mile is crucial in the delivery process. Our final mile delivery services guarantee your goods reach their final destination promptly and efficiently. Whether it's residential or commercial deliveries, we provide reliable and seamless solutions to meet your last-mile logistics needs.",
+
+	"Our final mile delivery services are designed to ensure that your goods are delivered on time and in perfect condition. We understand the importance of the final mile in the overall delivery process, and we are committed to providing reliable and efficient solutions. Our team of experienced professionals works closely with you to develop customized delivery plans that meet your specific requirements.",
+
+	"We offer a range of delivery options to suit your needs, including same-day, next-day, and scheduled deliveries. Our advanced tracking systems provide real-time updates on the status of your deliveries, giving you complete visibility and control. We also provide value-added services such as white-glove delivery, assembly, and installation to ensure that your goods are delivered with the highest level of care and attention to detail.",
+
+	"Our final mile delivery services are designed to meet the unique challenges of residential and commercial deliveries. We handle a wide variety of items, from small parcels to large and bulky goods. Our team is trained to handle your deliveries with care, ensuring they arrive safely and in perfect condition.",
+
+	"Customer satisfaction is our top priority. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our commitment to excellence ensures that your final mile deliveries are handled with the highest level of care and professionalism.",
+
+	"Trust us to manage your final mile delivery needs with expertise and efficiency. Our reliable and seamless solutions are designed to meet the demands of today's fast-paced marketplace, providing you with the support and reliability you need to ensure your goods reach their final destination promptly and efficiently.",
+];
 ---
 
-<Layout title="JDK Shipping - Final Mile Delivery">rohan</Layout>
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

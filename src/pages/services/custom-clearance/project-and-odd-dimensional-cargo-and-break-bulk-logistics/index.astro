@@ -1,8 +1,30 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import Hero from "@components/Hero/Hero.astro";
+import Content from "@components/Content/Content.astro";
+
+const title = "Project & Odd Dimensional Cargo & Break Bulk Logistics";
+const image = "project-and-odd";
+
+const content = [
+	"Transporting oversized or unconventional cargo requires specialized handling and planning. Our project and odd dimensional cargo & break bulk logistics services offer customized solutions for your unique shipping needs. From heavy machinery to large-scale industrial equipment, we ensure safe and efficient transportation.",
+
+	"Our project cargo services are designed to manage the complex logistics of transporting large and heavy items. We provide end-to-end solutions, including planning, coordination, transportation, and delivery. Our team of logistics experts works closely with you to develop tailored logistics plans that meet your specific requirements.",
+
+	"We handle all types of project cargo, including machinery, construction equipment, and industrial components. Our extensive network of carriers and partners allows us to provide flexible and cost-effective shipping options, ensuring that your cargo is delivered safely and on time.",
+
+	"Our break bulk logistics services are ideal for transporting large and bulky items that cannot be containerized. We provide specialized handling and transportation solutions to ensure that your break bulk cargo is transported securely and efficiently. Our team manages every aspect of the shipping process, from loading and securing to transportation and delivery.",
+
+	"In addition to standard transportation, we offer value-added services such as warehousing, inventory management, and customs clearance. Our advanced tracking systems provide real-time updates on the status of your shipments, giving you complete visibility and control over your project and odd dimensional cargo logistics.",
+
+	"Customer satisfaction is our top priority. We strive to build long-term relationships with our clients by providing exceptional service and reliable logistics solutions. Our commitment to excellence ensures that your project cargo is handled with the highest level of care and precision.",
+
+	"Trust us to manage your project and odd dimensional cargo logistics with expertise and efficiency. Our customized solutions are designed to meet the unique challenges of transporting oversized and unconventional cargo, providing you with the support and reliability you need to ensure safe and efficient transportation.",
+];
 ---
 
-<Layout
-	title="JDK Shipping - Project & Odd Dimensional Cargo & Break Bulk Logistics"
-	>rohan</Layout
->
+<Layout title={`JDK Shipping - ${title}`}>
+	<Hero title={title} image={image} />
+
+	<Content content={content} />
+</Layout>

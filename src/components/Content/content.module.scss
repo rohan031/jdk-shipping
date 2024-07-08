@@ -1,0 +1,13 @@
+@use "/src/styles/abstracts" as ab;
+
+.content {
+	display: grid;
+	gap: clamp(1em, 1.75vi, 1.5em);
+
+	p {
+		font-size: clamp(1rem, 1.5vi, 1.25rem);
+		font-weight: 500;
+
+		text-wrap: pretty;
+	}
+}
