@@ -38,3 +38,9 @@
 		@content;
 	}
 }
+
+@mixin footer {
+	@include screen-40 {
+		@content;
+	}
+}

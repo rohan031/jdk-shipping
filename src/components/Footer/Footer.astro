@@ -1,0 +1,135 @@
+---
+import styles from "./footer.module.scss";
+import { Icon } from "astro-icon/components";
+
+let date = new Date();
+let address = `
+Enfield Showroom, L-9 Sunder
+Singh Building, 2nd Floor, Main Road,
+opposite Royal, 
+Mahipalpur, 
+New Delhi
+Delhi 110037
+`;
+
+let phone = "+91 9810152451";
+let email = "info@jdkshipping.com";
+
+let social = {
+	facebook: "https://facebook.com",
+	twitter: "https://twitter.com",
+	whatsapp: "https://bit.ly/jdk-shipping-cta",
+	linkedin: "https://linkedin.com",
+};
+
+let links = [
+	{
+		text: "Customs Brokerage",
+		link: "/services/custom-clearance/customs-brokerage",
+	},
+	{
+		text: "Freight Forwarding",
+		link: "/services/freight-forwarding/freight-forwarding",
+	},
+	{
+		text: "Project & Odd Dimensional Cargo & Break Bulk Logistics",
+		link: "/services/custom-clearance/project-and-odd-dimensional-cargo-and-break-bulk-logistics",
+	},
+	{
+		text: "Network Cross Country Movement",
+		link: "/services/freight-forwarding/network-cross-country-movement",
+	},
+	{
+		text: "International Express Courier Services",
+		link: "/services/others/international-express-courier-services",
+	},
+	{
+		text: "Temperature Controlled Packaging & Logistics",
+		link: "/services/others/temperature-controlled-packaging-and-logistics",
+	},
+	{
+		text: "Final Mile Delivery",
+		link: "/services/others/final-mile-delivery",
+	},
+	{
+		text: "Ships Spares",
+		link: "/services/others/ships-spares",
+	},
+];
+---
+
+<footer class={styles.footer}>
+	<div class={`container ${styles.container}`}>
+		<div class={styles.info}>
+			<div class={styles.item}>
+				<h4 class={styles.title}>Get in Touch</h4>
+
+				<p class={styles.address}>{address}</p>
+
+				<div class={styles.phone}>
+					<a href={`tel:${phone}`}>{phone}</a>
+				</div>
+
+				<div class={styles.email}>
+					<a href={`mailto:${email}`}>{email}</a>
+				</div>
+			</div>
+
+			<div class={styles.item} data-last>
+				<h4 class={styles.title}>Useful Links</h4>
+
+				<div class={styles.links}>
+					<ul class={styles.sitemap}>
+						{
+							links.map((item) => {
+								return (
+									<li>
+										<a href={item.link}>{item.text}</a>
+									</li>
+								);
+							})
+						}
+					</ul>
+
+					<div class={styles.social}>
+						<a
+							href={social.facebook}
+							target="_blank"
+							class={styles.facebook}
+						>
+							<Icon name="fa6-brands:facebook-f" />
+						</a>
+						<a
+							href={social.twitter}
+							target="_blank"
+							class={styles.twitter}
+						>
+							<Icon name="fa6-brands:x-twitter" />
+						</a>
+						<a
+							href={social.whatsapp}
+							target="_blank"
+							class={styles.whatsapp}
+						>
+							<Icon name="fa6-brands:whatsapp" />
+						</a>
+						<a
+							href={social.linkedin}
+							target="_blank"
+							class={styles.linkedin}
+						>
+							<Icon name="fa6-brands:linkedin-in" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class={styles.copyright}>
+			<p>
+				Copyright © {date.getFullYear()}, JDK Shipping All rights
+				reserved.
+			</p>
+		</div>
+	</div>
+</footer>

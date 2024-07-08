@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 import "../styles/main.scss";
 import Nav from "@components/Nav/Nav.astro";
+import Footer from "@components/Footer/Footer.astro";
 
 interface Props {
 	title: string;
@@ -31,8 +32,11 @@ const { title } = Astro.props;
 		/>
 	</head>
 	<body>
-		<Nav />
-		<slot />
+		<div>
+			<Nav />
+			<slot />
+			<Footer />
+		</div>
 
 		<script>
 			new ResizeObserver(() => {
@@ -40,5 +44,14 @@ const { title } = Astro.props;
 				document.documentElement.style.setProperty("--vw", `${vw}px`);
 			}).observe(document.documentElement);
 		</script>
+		<style>
+			div {
+				display: flex;
+				flex-direction: column;
+				min-height: 100vb;
+
+				gap: 1em;
+			}
+		</style>
 	</body>
 </html>
