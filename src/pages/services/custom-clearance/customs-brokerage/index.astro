@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero/Hero.astro";
 import Content from "@components/Content/Content.astro";
+import ContactUs from "@components/ContactUs/ContactUs";
 
 const title = "Custom Brokerage";
 const image = "custom-brokerage";
@@ -19,4 +20,6 @@ const content = [
 	<Hero title={title} image={image} />
 
 	<Content content={content} />
+
+	<ContactUs client:visible />
 </Layout>

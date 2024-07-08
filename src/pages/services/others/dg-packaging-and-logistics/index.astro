@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero/Hero.astro";
 import Content from "@components/Content/Content.astro";
+import ContactUs from "@components/ContactUs/ContactUs";
 
 const title = "DG Packaging & Logistics";
 const image = "dg-packaging";
@@ -28,5 +29,5 @@ const content = [
 <Layout title={`JDK Shipping - ${title}`}>
 	<Hero title={title} image={image} />
 
-	<Content content={content} />
+	<Content content={content} /><ContactUs client:visible />
 </Layout>

@@ -1,0 +1,78 @@
+@use "/src/styles/abstracts" as ab;
+
+.contact {
+	display: grid;
+	gap: 1.5em;
+
+	@include ab.screen-48 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.title {
+		text-align: center;
+		text-wrap: balance;
+
+		@include ab.screen-48 {
+			text-align: left;
+		}
+	}
+
+	.form {
+		display: grid;
+		gap: 1em;
+
+		.input {
+			input,
+			textarea {
+				width: 100%;
+				padding-inline: 0.5em;
+				padding-block: 0.25em;
+
+				border-radius: 0.5em;
+				border-style: solid;
+				border-width: 1.5px;
+
+				border-color: hsl(0 0% 0% / 0.6);
+
+				font-size: clamp(1rem, 1.25vi, 1.25rem);
+			}
+
+			textarea {
+				resize: none;
+			}
+		}
+
+		.action {
+			text-align: center;
+
+			@include ab.screen-48 {
+				text-align: left;
+			}
+
+			button {
+				--_bg: var(--accent-primary);
+
+				background-color: var(--_bg);
+				color: var(--white);
+				font-weight: 500;
+
+				border: 0;
+				border-radius: 0.5em;
+
+				padding-inline: 1.25em;
+				padding-block: 0.5em;
+
+				transition: background-color 300ms;
+
+				&:hover,
+				&:focus-visible {
+					--_bg: var(--accent-primary-hover);
+				}
+
+				&:active {
+					--_bg: var(--accent-primary-active);
+				}
+			}
+		}
+	}
+}

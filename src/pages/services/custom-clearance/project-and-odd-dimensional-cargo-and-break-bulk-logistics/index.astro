@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/Hero/Hero.astro";
 import Content from "@components/Content/Content.astro";
+import ContactUs from "@components/ContactUs/ContactUs";
 
 const title = "Project & Odd Dimensional Cargo & Break Bulk Logistics";
 const image = "project-and-odd";
@@ -27,4 +28,6 @@ const content = [
 	<Hero title={title} image={image} />
 
 	<Content content={content} />
+
+	<ContactUs client:visible />
 </Layout>

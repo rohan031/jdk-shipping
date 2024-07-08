@@ -11,7 +11,7 @@
 
 	--accent-primary: var(--red);
 	--accent-primary-hover: hsl(0, 100%, 40%);
-	--accent-primary-hover: hsl(0, 100%, 25%);
+	--accent-primary-active: hsl(0, 100%, 25%);
 
 	--max-width: 70rem;
 	--max-width-wide: 90rem;
@@ -22,6 +22,9 @@
 	--whatsapp: #25d366;
 
 	--overlay: hsla(0, 0%, 0%, 0.75);
+
+	accent-color: var(--accent-primary);
+	caret-color: var(--accent-primary);
 }
 
 body {
@@ -40,4 +43,12 @@ body {
 .container-wide {
 	width: min(90%, var(--max-width-wide));
 	margin-inline: auto;
+}
+
+.accent {
+	color: var(--accent-primary);
+}
+
+h2 {
+	font-size: clamp(1.75rem, 4vi, 3.5rem);
 }
