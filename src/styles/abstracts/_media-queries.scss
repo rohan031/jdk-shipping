@@ -44,3 +44,9 @@
 		@content;
 	}
 }
+
+@mixin main {
+	@include screen-40 {
+		@content;
+	}
+}

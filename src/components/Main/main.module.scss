@@ -1,0 +1,43 @@
+@use "/src/styles/abstracts" as ab;
+
+.main {
+	padding-block-start: 3em;
+
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+
+	@include ab.main {
+		--_w: min(var(--max-width), 90%);
+		--_full: calc(100 * var(--vw));
+		--_margin-inline-total: calc(var(--_full) - var(--_w));
+		--_margin: calc(var(--_margin-inline-total) / 2);
+
+		flex-direction: row-reverse;
+		align-items: center;
+
+		padding-block-start: 1em;
+		gap: clamp(1em, 4vi, 3em);
+
+		margin-right: var(--_margin);
+	}
+
+	.heading {
+		padding-inline: 1em;
+
+		text-align: center;
+		text-wrap: balance;
+
+		@include ab.main {
+			text-align: left;
+			padding-inline: 0;
+			width: 40%;
+		}
+	}
+
+	.image {
+		@include ab.main {
+			width: 60%;
+		}
+	}
+}
