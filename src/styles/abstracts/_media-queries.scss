@@ -56,3 +56,9 @@
 		@content;
 	}
 }
+
+@mixin container-40 {
+	@container (min-width: 34.5em) {
+		@content;
+	}
+}

@@ -17,10 +17,11 @@
 		text-align: left;
 		text-wrap: pretty;
 
+		grid-template-columns: 36.5% 1fr;
 		grid-template-areas:
-			"heading heading services services services"
-			"text text services services services"
-			"action action services services services";
+			"heading services services services"
+			"text services services services"
+			"action services services services";
 
 		align-items: center;
 	}
@@ -48,10 +49,12 @@
 		grid-area: action;
 	}
 
-	.services {
-		// outline: 2px solid lightgreen;
+	.services_parent {
 		grid-area: services;
+		container-type: inline-size;
+	}
 
+	.services {
 		overflow: visible;
 
 		display: grid;
@@ -94,7 +97,7 @@
 			grid-row: 4/6;
 		}
 
-		@include ab.services {
+		@include ab.container-40 {
 			place-items: center;
 
 			grid-template-columns: auto 2rem auto 2rem auto;
@@ -135,7 +138,7 @@
 
 			aspect-ratio: 1;
 			display: flex;
-			min-height: clamp(10.75rem, 47.5vi, 15rem);
+			min-height: clamp(10.75rem, 47.5vi, 14rem);
 			align-items: center;
 			justify-content: center;
 
@@ -146,8 +149,8 @@
 
 			transition: background-color 300ms;
 
-			@include ab.services {
-				min-height: clamp(10rem, 20vi, 14.5rem);
+			@include ab.container-40 {
+				// min-height: clamp(10rem, 20vi, 14.5rem);
 			}
 
 			&:has(a:hover, :focus-visible) {

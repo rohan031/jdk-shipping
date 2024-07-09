@@ -62,35 +62,37 @@ const services = [
 		</p>
 	</div>
 
-	<div class={styles.services}>
-		{
-			services.map((service) => {
-				return (
-					<div class={styles.service_item}>
-						<a href={service.link}>
-							{function () {
-								switch (service.title) {
-									case "IMPORT CLEARING":
-										return <ImportClearing />;
-									case "LIASON SERVICE":
-										return <LiasonService />;
-									case "FREIGHT SERVICES":
-										return <FreightService />;
-									case "LOGISTICS":
-										return <Logistics />;
-									case "WAREHOUSING":
-										return <Warehousing />;
-									case "TRANSPORTATION":
-										return <Transportation />;
-								}
-							}}
+	<div class={styles.services_parent}>
+		<div class={styles.services}>
+			{
+				services.map((service) => {
+					return (
+						<div class={styles.service_item}>
+							<a href={service.link}>
+								{function () {
+									switch (service.title) {
+										case "IMPORT CLEARING":
+											return <ImportClearing />;
+										case "LIASON SERVICE":
+											return <LiasonService />;
+										case "FREIGHT SERVICES":
+											return <FreightService />;
+										case "LOGISTICS":
+											return <Logistics />;
+										case "WAREHOUSING":
+											return <Warehousing />;
+										case "TRANSPORTATION":
+											return <Transportation />;
+									}
+								}}
 
-							<span class="accent">{service.title}</span>
-						</a>
-					</div>
-				);
-			})
-		}
+								<span class="accent">{service.title}</span>
+							</a>
+						</div>
+					);
+				})
+			}
+		</div>
 	</div>
 
 	<div class={styles.action}>
