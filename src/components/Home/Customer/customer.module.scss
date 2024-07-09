@@ -1,0 +1,55 @@
+@use "/src/styles/abstracts" as ab;
+
+.container {
+	display: grid;
+	gap: clamp(2em, 3vi, 3em);
+
+	.heading {
+		text-align: center;
+		text-wrap: balance;
+
+		@include ab.main {
+			text-align: left;
+		}
+	}
+
+	.content {
+		@include ab.main {
+			display: flex;
+			gap: clamp(2em, 5vi, 5em);
+
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+
+		.text {
+			font-size: clamp(1rem, 1.5vi, 1.25rem);
+			font-weight: 500;
+
+			display: grid;
+			gap: 1em;
+
+			@include ab.main {
+				height: 100%;
+				align-content: space-around;
+			}
+
+			.action {
+				text-align: center;
+
+				@include ab.main {
+					text-align: left;
+				}
+			}
+		}
+
+		.image {
+			display: none;
+
+			@include ab.main {
+				display: block;
+				min-width: 40%;
+			}
+		}
+	}
+}

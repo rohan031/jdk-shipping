@@ -1,0 +1,33 @@
+@use "/src/styles/abstracts" as ab;
+
+.button {
+	--_bg: transparent;
+	--_c: var(--text);
+
+	display: inline-block;
+	background-color: var(--_bg);
+
+	font-size: clamp(1rem, 1.5vi, 1.25rem);
+	text-decoration: none;
+	color: var(--_c);
+	font-weight: 500;
+
+	border: 2px solid var(--accent-primary);
+	padding-inline: 1em;
+	padding-block: 0.25em;
+
+	border-radius: 0.5em;
+
+	transition: background-color 300ms, color 300ms;
+
+	&:hover,
+	&:focus-visible {
+		--_bg: var(--accent-primary);
+		--_c: var(--white);
+	}
+
+	&:active {
+		--_bg: var(--accent-primary-active);
+		--_c: var(--white);
+	}
+}

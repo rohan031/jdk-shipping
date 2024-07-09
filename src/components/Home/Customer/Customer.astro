@@ -1,0 +1,36 @@
+---
+import styles from "./customer.module.scss";
+import Button from "@components/CTA/Button.astro";
+---
+
+<div class={`container ${styles.container}`}>
+	<div class={styles.heading}>
+		<h2>
+			<span class="accent">Customer-Focused</span>
+			Shipping Solutions Providers for the <span class="accent">
+				last 27 years.
+			</span>
+		</h2>
+	</div>
+
+	<div class={styles.content}>
+		<div class={styles.text}>
+			<p>
+				Since its inception, JDK Shipping has been a pioneer in the
+				industry, consistently providing reliable and innovative
+				shipping solutions. With a strong commitment to customer
+				satisfaction, JDK Shipping has built a reputation as a trusted
+				partner, navigating the complexities of logistics to propel
+				businesses forward.
+			</p>
+
+			<div class={styles.action}>
+				<Button />
+			</div>
+		</div>
+
+		<div class={styles.image}>
+			<img src="/customer.webp" alt="" />
+		</div>
+	</div>
+</div>
