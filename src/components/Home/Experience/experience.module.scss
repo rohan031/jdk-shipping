@@ -1,0 +1,32 @@
+@use "/src/styles/abstracts" as ab;
+
+.experience {
+	--_overlay: hsla(0, 0%, 25%, 0.75);
+
+	background-image: url("/experience.webp");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	border-image: fill 0 linear-gradient(var(--_overlay), var(--_overlay));
+
+	padding-block: clamp(2em, 4vi, 4em);
+
+	.container {
+		--_count: 2;
+
+		display: grid;
+		grid-template-columns: repeat(var(--_count), clamp(4.75em, 9vi, 9em));
+
+		justify-content: space-around;
+
+		row-gap: 3em;
+
+		@include ab.main {
+			--_count: 4;
+
+			align-content: center;
+			justify-content: space-between;
+		}
+	}
+}

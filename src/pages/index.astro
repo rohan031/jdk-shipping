@@ -2,10 +2,16 @@
 import Layout from "@layouts/Layout.astro";
 import Main from "@components/Home/Main/Main.astro";
 import Customer from "@components/Home/Customer/Customer.astro";
+import ContactUs from "@components/ContactUs/ContactUs";
+import Experience from "@components/Home/Experience/Experience.astro";
 ---
 
 <Layout title="JDK Shipping - Home">
 	<Main />
 
 	<Customer />
+
+	<Experience />
+
+	<ContactUs client:load />
 </Layout>
