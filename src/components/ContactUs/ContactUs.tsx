@@ -85,6 +85,36 @@ const ContactUs = () => {
 		if (!validateInput()) {
 			return;
 		}
+
+		setSubmitting(true);
+		const url = `${import.meta.env.PUBLIC_API}/jdk/contact-us`;
+		fetch(url, {
+			method: "POST",
+			body: JSON.stringify(userInput),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((res) => {
+				return res.json();
+			})
+			.then((res) => {
+				if (res.error) throw new Error(res.message);
+
+				toast.success("successfully submitted the from");
+				setUserInput(init);
+			})
+			.catch((err) => {
+				if (err instanceof SyntaxError) {
+					toast.error("Something went wrong!!");
+					return;
+				}
+
+				toast.error(err.message);
+			})
+			.finally(() => {
+				setSubmitting(false);
+			});
 	};
 
 	return (
@@ -158,7 +188,9 @@ const ContactUs = () => {
 					</div>
 
 					<div className={styles.action}>
-						<button disabled={submitting}>Submit</button>
+						<button disabled={submitting}>
+							{submitting ? "Processing..." : "Submit"}
+						</button>
 					</div>
 				</form>
 			</div>
