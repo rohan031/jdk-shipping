@@ -55,9 +55,9 @@ const { title } = Astro.props;
 
 			main {
 				display: grid;
-				gap: 3em;
+				gap: clamp(3em, 5vi, 5em);
 
-				margin-block-end: 3em;
+				margin-block-end: clamp(3em, 5vi, 5em);
 			}
 		</style>
 	</body>

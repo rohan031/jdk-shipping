@@ -1,8 +1,9 @@
 ---
 import styles from "./main.module.scss";
+import Button from "@components/CTA/Button.astro";
 ---
 
-<div class={styles.main}>
+<div class={`container ${styles.main}`}>
 	<div class={styles.heading}>
 		<h1>
 			<span class="accent"> Delivering Success</span>, One Package at a
@@ -10,7 +11,16 @@ import styles from "./main.module.scss";
 		</h1>
 	</div>
 
+	<div class={styles.cta}>
+		<Button />
+	</div>
+
 	<div class={styles.image}>
-		<img src="/hero.webp" alt="" />
+		<img
+			srcset="/main.png 480w, /main-lg.png 800w"
+			sizes="(max-width: 500px) 480px, 800px"
+			src="/main.png"
+			alt=""
+		/>
 	</div>
 </div>
