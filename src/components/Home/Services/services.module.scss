@@ -176,16 +176,34 @@
 					transition: color 300ms;
 				}
 
+				svg {
+					* {
+						transition: fill 300ms, stroke 300ms, fill-opacity 300ms,
+							stroke-opacity 300ms;
+					}
+				}
+
 				&:hover,
 				&:focus-visible {
 					span {
 						color: var(--white);
 					}
 
-					svg {
-						mix-blend-mode: difference;
-						* {
-							// fill: var(--white);
+					&:not(&[data-icon="warehousing"]) {
+						svg {
+							* {
+								fill: var(--white);
+								fill-opacity: 1;
+							}
+						}
+					}
+
+					&[data-icon="warehousing"] {
+						svg {
+							* {
+								stroke: var(--white);
+								stroke-opacity: 1;
+							}
 						}
 					}
 				}
