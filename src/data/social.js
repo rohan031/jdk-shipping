@@ -1,6 +1,6 @@
 export const social = {
-	facebook: "https://facebook.com",
-	twitter: "https://twitter.com",
-	whatsapp: "https://bit.ly/jdk-shipping-cta",
-	linkedin: "https://linkedin.com",
+    facebook: "https://www.facebook.com/jdkshipping",
+    twitter: "https://x.com/jdkshipping",
+    whatsapp: "https://bit.ly/jdk-shipping-cta",
+    linkedin: "https://www.linkedin.com/company/jdkshipping/",
 };

@@ -1,5 +1,27 @@
 ---
 import styles from "./about.module.scss";
+import {Icon} from "astro-icon/components"
+
+let about = [
+    {
+        img:"./about_us.svg",
+        name: "Aditya",
+        postion: "Director, Company Name",
+        para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisque in tincidunt ligula. Etiam placera Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisqu iLorem ipsum dolor sit amet, consectetur adipiscing elit. I commodo a tortor eu gravida. Quisque in tincidunt ligula. Etiam placera Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisque i",
+    },
+    {
+        img:"./about_us.svg",
+        name: "Aditya Mohan",
+        postion: "Director, Company Name",
+        para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisque in tincidunt ligula. Etiam placera Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisqu iLorem ipsum dolor sit amet, consectetur adipiscing elit. I commodo a tortor eu gravida. Quisque in tincidunt ligula. Etiam placera Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisque i",
+    },
+    {
+        img:"./about_us.svg",
+        name: "Aditya",
+        postion: "Director, Company Name",
+        para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisque in tincidunt ligula. Etiam placera Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisqu iLorem ipsum dolor sit amet, consectetur adipiscing elit. I commodo a tortor eu gravida. Quisque in tincidunt ligula. Etiam placera Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo a tortor eu gravida. Quisque i",
+    }
+];
 ---
 
 <div class={`container ${styles.container}`}>
@@ -7,91 +29,35 @@ import styles from "./about.module.scss";
 		<h2>What are People <span class="accent">thinking</span> about us?</h2>
 	</div>
 	<div class={styles.carousel} id="carousel">
-		<div class={styles.item}>
+     {   about.map((item) => {
+            return (
+            <div class={styles.item}>
 			<div>
-				<img src="./about_us.svg" alt="img" />
+				<img src={item.img} alt="img" />
 			</div>
 			<div class={styles.name}>
-				<p><span class="accent">Aditya </span></p>
-				<p>Director, Company Name</p>
+				<p><span class="accent">{item.name} </span></p>
+				<p>{item.postion}</p>
 			</div>
 			<div class={styles.para}>
 				<div>
 					<img src="./open.svg" alt='"' />
 				</div>
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-					commodo a tortor eu gravida. Quisque in tincidunt ligula.
-					Etiam placera Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. In commodo a tortor eu gravida. Quisque
-					iLorem ipsum dolor sit amet, consectetur adipiscing elit. In
-					commodo a tortor eu gravida. Quisque in tincidunt ligula.
-					Etiam placera Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. In commodo a tortor eu gravida. Quisque i
+					{item.para}
 				</p>
 				<div class={styles.close}>
 					<img src="./close.svg" alt='"' />
 				</div>
 			</div>
 		</div>
-		<div class={styles.item}>
-			<div>
-				<img src="./about_us.svg" alt="img" />
-			</div>
-			<div class={styles.name}>
-				<p><span class="accent">Aditya Mohan</span></p>
-				<p>Director, Company Name</p>
-			</div>
-			<div class={styles.para}>
-				<div>
-					<img src="./open.svg" alt='"' />
-				</div>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-					commodo a tortor eu gravida. Quisque in tincidunt ligula.
-					Etiam placera Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. In commodo a tortor eu gravida. Quisque
-					iLorem ipsum dolor sit amet, consectetur adipiscing elit. In
-					commodo a tortor eu gravida. Quisque in tincidunt ligula.
-					Etiam placera Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. In commodo a tortor eu gravida. Quisque i
-				</p>
-				<div class={styles.close}>
-					<img src="./close.svg" alt='"' />
-				</div>
-			</div>
-		</div>
-		<div class={styles.item}>
-			<div>
-				<img src="./about_us.svg" alt="img" />
-			</div>
-			<div class={styles.name}>
-				<p><span class="accent">Aditya </span></p>
-				<p>Director, Company Name</p>
-			</div>
-			<div class={styles.para}>
-				<div>
-					<img src="./open.svg" alt='"' />
-				</div>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-					commodo a tortor eu gravida. Quisque in tincidunt ligula.
-					Etiam placera Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. In commodo a tortor eu gravida. Quisque
-					iLorem ipsum dolor sit amet, consectetur adipiscing elit. In
-					commodo a tortor eu gravida. Quisque in tincidunt ligula.
-					Etiam placera Lorem ipsum dolor sit amet, consectetur
-					adipiscing elit. In commodo a tortor eu gravida. Quisque i
-				</p>
-				<div class={styles.close}>
-					<img src="./close.svg" alt='"' />
-				</div>
-			</div>
-		</div>
+            );
+        })}
+	
 	</div>
 	<div class={styles.button}>
-		<button class="prev">&#8592;</button>
-		<button class="next">&#8594;</button>
+		<button class="prev"><Icon name="fa6-solid:arrow-left-long"/></button>
+		<button class="next"><Icon name="fa6-solid:arrow-right-long"/></button>
 	</div>
 </div>
 <script>
