@@ -3,15 +3,15 @@ import styles from "./main.module.scss";
 import Button from "@components/CTA/Button.astro";
 ---
 
-<div class={`container ${styles.main}`}>
-	<div class={styles.heading}>
+<div class={styles.main}>
+	<div class={`container ${styles.heading}`}>
 		<h1>
 			<span class="accent"> Delivering Success</span>, One Package at a
 			Time.
 		</h1>
 	</div>
 
-	<div class={styles.cta}>
+	<div class={`container ${styles.cta}`}>
 		<Button />
 	</div>
 
