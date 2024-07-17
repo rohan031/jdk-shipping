@@ -15,6 +15,9 @@
 	}
 
 	.image {
+		width: min(100%, var(--max-width));
+		margin-inline: auto;
+
 		img {
 			width: 100%;
 			object-fit: cover;
