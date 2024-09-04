@@ -118,10 +118,6 @@
 				cursor: pointer;
 			}
 
-			@include ab.nav {
-				overflow: visible;
-			}
-
 			.link {
 				font-weight: 600;
 				font-size: 1.25rem;
@@ -160,6 +156,7 @@
 
 				clip-path: none;
 				padding: 0;
+				overflow: visible;
 			}
 
 			.nav_logo {
