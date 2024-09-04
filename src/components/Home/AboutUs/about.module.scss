@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
 
-    gap: clamp(1em, 2vw, 2em);
+    gap: clamp(1em, 2vi, 2em);
 
     @include ab.services {
         display: grid;
@@ -25,11 +25,11 @@
             align-items: center;
             border: 0.1em solid var(--red);
             border-radius: 0.5em;
-            // font-size: clamp(0.75rem, 1.5vw, 1.5rem);
-            padding-inline: clamp(0.8em, 1.5vw, 1.5em);
-            padding-block: clamp(0.8em, 1vw, 1em);
+            // font-size: clamp(0.75rem, 1.5vi, 1.5rem);
+            padding-inline: clamp(0.8em, 1.5vi, 1.5em);
+            padding-block: clamp(0.8em, 1vi, 1em);
             cursor: pointer;
-            height: clamp(1em, 1.8vw, 1.8em);
+            height: clamp(1em, 1.8vi, 1.8em);
 
             background-color: var(--white);
             transition: all 200ms ease-in-out;
@@ -69,11 +69,11 @@
         grid-area: carousel;
         display: grid;
         grid-template-columns: repeat(3, 100%);
-        gap: clamp(1em, 2vw, 2em);
+        gap: clamp(1em, 2vi, 2em);
         overflow-x: scroll;
         scrollbar-width: none;
 
-        padding: clamp(0.5em, 1vw, 1em);
+        padding: clamp(0.5em, 1vi, 1em);
 
         .item {
             min-width: 100%;
@@ -82,18 +82,18 @@
             border-radius: 1em;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             padding-inline: 0.75em;
-            padding-block: clamp(0.8em, 1.5vw, 1.5em);
+            padding-block: clamp(0.8em, 1.5vi, 1.5em);
             display: flex;
             flex-direction: column;
-            gap: clamp(0.8em, 1vw, 1em);
+            gap: clamp(0.8em, 1vi, 1em);
             align-items: center;
             .name {
                 p {
-                    font-size: clamp(0.75rem, 1vw, 1rem);
+                    font-size: clamp(0.75rem, 1vi, 1rem);
                     font-weight: 500;
                     span {
                         font-weight: 600;
-                        font-size: clamp(1rem, 1.5vw, 1.5rem);
+                        font-size: clamp(1rem, 1.5vi, 1.5rem);
                     }
                 }
             }
@@ -101,7 +101,7 @@
             .para {
                 p {
                     font-weight: 500;
-                    font-size: clamp(0.75rem, 1vw, 1rem);
+                    font-size: clamp(0.75rem, 1vi, 1rem);
                 }
                 display: flex;
                 gap: 0.5em;
@@ -111,7 +111,7 @@
                     align-items: flex-end;
                 }
                 img {
-                    width: clamp(5em, 8vw, 8em);
+                    width: clamp(5em, 8vi, 8em);
                 }
             }
             div {
